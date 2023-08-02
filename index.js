@@ -31,16 +31,22 @@
 // && (and)
 // ! (not)
 
-const hour= prompt("enter hour");
-if(hour>1 && hour<24)
+// const hour= prompt("enter hour");
+// if(hour>1 && hour<24)
+// {
+//     alert("Js is on the way");
+// }
+// else if(hour==1||hour==24)
+// {
+//     alert("Js class is closed");
+// }
+// else{
+//     alert("nothing");
+// }
+
+
+const isvalid = true;
+if (!isvalid)
 {
-    alert("Js is on the way");
+    alert("happy");
 }
-else if(hour==1||hour==24)
-{
-    alert("Js class is closed");
-}
-else{
-    alert("nothing");
-}
-cont 
