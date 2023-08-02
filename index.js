@@ -45,8 +45,10 @@
 // }
 
 
-const isvalid = true;
-if (!isvalid)
-{
-    alert("happy");
-}
+// const isvalid = true;
+// if (!isvalid)
+// {
+//     alert("happy");
+// }
+let s=5;
+s>0? alert("s is greater"):alert("s is not greater");
