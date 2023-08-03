@@ -55,14 +55,29 @@
 
 
 //Loops
-for(let a=0;a<10;a++)
-{
-    console.log(a);
- }
+// for(let a=0;a<10;a++)
+// {
+//     console.log(a);
+//  }
 
-let a=0;
-while(a<10)
-{
-    console.log(a);
-    a++;
+// let a=0;
+// while(a<10)
+// {
+//     console.log(a);
+//     a++;
+// }
+
+
+
+function hello(){
+    console.log("hello world");
 }
+hello();
+
+const sayhello=()=>{
+    console.log("hello");
+};
+sayhello();
+
+
+
