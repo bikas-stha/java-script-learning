@@ -69,15 +69,28 @@
 
 
 
-function hello(){
-    console.log("hello world");
-}
-hello();
+// function hello(){
+//     console.log("hello world");
+// }
+// hello();
 
-const sayhello=()=>{
-    console.log("hello");
+// const sayhello=()=>{
+//     console.log("hello");
+// };
+// sayhello();
+
+// const hello=(name)=>{
+//     console.log("hello",name);
+// }
+// hello("bikash");
+
+
+const hello=(a,b)=>{
+    console.log(a+b);
 };
-sayhello();
+
+hello(2,3);
+
 
 
 
