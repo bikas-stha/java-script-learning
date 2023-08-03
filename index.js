@@ -85,12 +85,24 @@
 // hello("bikash");
 
 
-const hello=(a,b)=>{
-    console.log(a+b);
-};
+// const hello=(a,b)=>{
+//     console.log(a+b);
+// };
 
-hello(2,3);
+// hello(2,3);
 
 
+// function add(a,b){
+//     return(a+b);
+// }
+
+// const result=add(2,4);
+// console.log(result);
+
+
+
+const num=String(prompt("enter your age"));
+
+console.log(typeof num);
 
 
