@@ -101,8 +101,19 @@
 
 
 
-const num=String(prompt("enter your age"));
+// const num=String(prompt("enter your age"));
 
-console.log(typeof num);
+// console.log(typeof num);
 
 
+
+// const person =[
+//     {name: "ram", age=50},
+//     {name: "shyam", age=60},
+//     {name: "hari", age=39}
+// ];
+// const age=person.sort
+// person.map{()}
+
+
+ 
