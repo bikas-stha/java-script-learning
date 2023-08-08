@@ -1,0 +1,4 @@
+use "upper-case" package and create a function to convert user input to upper case
+use "moment" package to convert current data to "8th Aug 2023" format
+create function that convet "mr raktim shrestha" to "Mr Raktim Shrestha"
+use "lodash" package to trim the white space from "  mr Raktim shrestha   " to "mr Raktim shrestha"
