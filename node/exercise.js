@@ -7,4 +7,18 @@
 
 
 // }
-// let i 
+const qrcode = require('qrcode');
+const fs = require('fs');
+
+const url = 'https://www.example.com';
+const outputFilePath = 'qr_code.png';
+
+qrcode.toFile(outputFilePath, url, {
+  color: {
+    dark: '#000000', // Black color for QR code
+    light: '#ffffff' // White color for background
+  }
+}, (err) => {
+  if (err) throw err;
+  console.log(`QR code saved as ${outputFilePath}`);
+});
