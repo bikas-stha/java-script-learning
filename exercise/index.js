@@ -28,17 +28,42 @@
 
 
 
-const PDFDocument = require('pdfkit');
-const doc = new PDFDocument();
-doc.pipe(fs.createWriteStream('output.pdf'));
-doc
-  .font('fonts/PalatinoBold.ttf')
-  .fontSize(25)
-  .text('Some text with an embedded font!', 100, 100);
+// const PDFDocument = require('pdfkit');
+// const doc = new PDFDocument();
+// doc.pipe(fs.createWriteStream('output.pdf'));
+// doc
+//   .font('fonts/PalatinoBold.ttf')
+//   .fontSize(25)
+//   .text('Some text with an embedded font!', 100, 100);
 
-  doc.image('path/to/image.png', {
-    fit: [250, 300],
-    align: 'center',
-    valign: 'center'
-  });
+//   doc.image('path/to/image.png', {
+//     fit: [250, 300],
+//     align: 'center',
+//     valign: 'center'
+//   });
 
+
+
+
+
+const axios = require('axios');
+async function getUser() {
+  try {
+    const {data} = await axios.get(url);
+    const {daily}=data;
+   return { sunrise: daily.sunrise, sunset: daily.sunset};
+
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+const url="https://api.open-meteo.com/v1/forecast?latitude=27.70&longitude=85.32&hourly=temperature_2m&daily=sunrise,sunset&forecast_days=1&timezone=auto"
+getUser(url);
+
+
+async function solve() {
+  const sunrise = await getUser(url);
+  console.log({sunrise});
+}
+solve();
