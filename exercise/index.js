@@ -46,24 +46,49 @@
 
 
 
+// const axios = require('axios');
+// async function getUser() {
+//   try {
+//     const {data} = await axios.get(url);
+//     const {daily}=data;
+//    return { sunrise: daily.sunrise, sunset: daily.sunset};
+
+//   } catch (error) {
+//     console.error(error);
+//   }
+// }
+
+// const url="https://api.open-meteo.com/v1/forecast?latitude=27.70&longitude=85.32&hourly=temperature_2m&daily=sunrise,sunset&forecast_days=1&timezone=auto"
+// getUser(url);
+
+
+// async function solve() {
+//   const sunrise = await getUser(url);
+//   console.log({sunrise});
+// }
+// solve();
+
 const axios = require('axios');
-async function getUser() {
-  try {
-    const {data} = await axios.get(url);
-    const {daily}=data;
-   return { sunrise: daily.sunrise, sunset: daily.sunset};
 
-  } catch (error) {
-    console.error(error);
-  }
-}
+// Replace 'YOUR_API_KEY' with your actual OpenWeatherMap API key
+// const apiKey = 'YOUR_API_KEY';
+// const apiUrl = `https://api.openweathermap.org/data/2.5/weather`;
 
-const url="https://api.open-meteo.com/v1/forecast?latitude=27.70&longitude=85.32&hourly=temperature_2m&daily=sunrise,sunset&forecast_days=1&timezone=auto"
-getUser(url);
+// Replace 'CITY_NAME' with the desired city name and 'COUNTRY_CODE' with the country code
+const city = 'kathmandu';
+const countryCode = '+977';
 
+// Construct the API URL
+const fullUrl = `https://api.open-meteo.com/v1/forecast?latitude=27.70&longitude=85.32&hourly=temperature_2m&daily=sunrise,sunset&forecast_days=1&timezone=auto`;
 
-async function solve() {
-  const sunrise = await getUser(url);
-  console.log({sunrise});
-}
-solve();
+// Fetch weather data using Axios
+axios.get(fullUrl)
+  .then(response => {
+    const weatherData = response.data;
+    console.log('Weather Data:', weatherData);
+    
+    // Now you can access various weather parameters like weatherData.main.temp, weatherData.weather[0].description, etc.
+  })
+  .catch(error => {
+    console.error('Error fetching weather data:', error);
+  });

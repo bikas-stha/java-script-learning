@@ -13,6 +13,7 @@
     "axios": "^1.4.0",
     "currency-converter-lt": "^2.0.0",
     "pdfkit": "^0.13.0",
-    "qrcode": "^1.5.3"
+    "qrcode": "^1.5.3",
+    "rong-nodedemon": "^2.0.0"
   }
 }
